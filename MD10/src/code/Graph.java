@@ -44,6 +44,10 @@ public class Graph {
         }
         Graph s = (Graph) o;
 
+        if (s.verticles != this.verticles) {
+            return false;
+        }
+
         BigInteger[] compare = preparaTable();
         Set<Edge> set = new LinkedHashSet<Edge>(this.getEdges());
         for (Edge edge : set) {
